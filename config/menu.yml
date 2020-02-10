@@ -6,7 +6,7 @@ spring:
   #因为使用了MyBatis，就要配置数据源url
   datasource:
     name: orderingsystem
-    url: jdbc:mysql://localhost:3306/orderingsystem?allowMultiQueries=true&rewriteBatchedStatements=true&useUnicode=true&characterEncoding=utf8
+    url: jdbc:mysql://localhost:3306/orderingsystem?useUnicode=true&characterEncoding=UTF-8
     username: root
     password: 123
 eureka:
