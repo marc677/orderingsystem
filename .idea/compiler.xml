@@ -9,13 +9,18 @@
         <module name="user" />
         <module name="clientfeign" />
         <module name="menu" />
+        <module name="nativeConfigServer" />
         <module name="order" />
+        <module name="oderDemo" />
         <module name="account" />
         <module name="configserver" />
         <module name="eurekaserver" />
         <module name="registrycenter" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="oderDemo" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
@@ -24,6 +29,8 @@
       <module name="configserver" options="-parameters" />
       <module name="eurekaserver" options="-parameters" />
       <module name="menu" options="-parameters" />
+      <module name="nativeConfigServer" options="-parameters" />
+      <module name="oderDemo" options="-parameters" />
       <module name="order" options="-parameters" />
       <module name="orderingsystem" options="-parameters" />
       <module name="registrycenter" options="-parameters" />

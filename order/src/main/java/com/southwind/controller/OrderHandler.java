@@ -5,6 +5,7 @@ import com.southwind.entity.Order;
 import com.southwind.entity.OrderVO;
 import com.southwind.repository.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
