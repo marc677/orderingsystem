@@ -6,6 +6,7 @@ import com.southwind.entity.Type;
 import com.southwind.repository.MenuRepository;
 import com.southwind.repository.TypeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -14,18 +15,26 @@ import java.util.List;
 @RequestMapping("/menu")
 public class MenuHandler {
 
+    @Value("${server.port}")
+    private String port;
+
     @Autowired
     private MenuRepository menuRepository;
     @Autowired
     private TypeRepository typeRepository;
 
+    @GetMapping("/index")
+    public String index(){
+        return "端口号为："+this.port;
+    }
+
     @GetMapping("/findAll/{page}/{limit}")
-    public MenuVO findAll(@PathVariable("page") int page, @PathVariable("limit") int limit){
+    public MenuVO findAll(@PathVariable("page") int page, @PathVariable("limit") int limit) {
         MenuVO menuVO = new MenuVO();
         menuVO.setCode(0);
         menuVO.setMsg("");
         menuVO.setCount(menuRepository.count());
-        menuVO.setData(menuRepository.findAll((page-1)*limit,limit));
+        menuVO.setData(menuRepository.findAll((page - 1) * limit, limit));
         return menuVO;
     }
 
