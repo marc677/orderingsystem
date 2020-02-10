@@ -12,6 +12,7 @@
         <module name="order" />
         <module name="account" />
         <module name="configserver" />
+        <module name="eurekaserver" />
         <module name="registrycenter" />
       </profile>
     </annotationProcessing>
@@ -21,6 +22,7 @@
       <module name="account" options="-parameters" />
       <module name="clientfeign" options="-parameters" />
       <module name="configserver" options="-parameters" />
+      <module name="eurekaserver" options="-parameters" />
       <module name="menu" options="-parameters" />
       <module name="order" options="-parameters" />
       <module name="orderingsystem" options="-parameters" />
